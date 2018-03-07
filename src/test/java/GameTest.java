@@ -27,6 +27,8 @@ public class GameTest {
      @Test
     public void canCompareHandsWithAWinner(){
         player1.addCard(card1);
+        player1.addCard(card1);
+        player2.addCard(card2);
         player2.addCard(card2);
         String result = game.compareHands();
         assertEquals(0, player1.getScore());
@@ -37,6 +39,8 @@ public class GameTest {
 
     @Test
     public void canCompareHandsWithADraw(){
+        player1.addCard(card1);
+        player2.addCard(card1);
         player1.addCard(card1);
         player2.addCard(card1);
         String result = game.compareHands();

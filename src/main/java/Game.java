@@ -10,13 +10,13 @@ public class Game {
 
 
     public String compareHands() {
-        if (player1.getCard().getValue() > player2.getCard().getValue()) {
+        if (player1.getTotalValue() > player2.getTotalValue()) {
             player1.increaseScore();
             player1.resetHand();
             player2.resetHand();
             return player1.getName() + " Wins";
         }
-        else if (player2.getCard().getValue() > player1.getCard().getValue()){
+        else if (player2.getTotalValue() > player1.getTotalValue()){
             player2.increaseScore();
             player1.resetHand();
             player2.resetHand();

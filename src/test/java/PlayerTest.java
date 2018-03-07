@@ -59,7 +59,7 @@ public class PlayerTest {
     @Test
     public void canGetCardHand(){
         player.addCard(card);
-        assertEquals(card, player.getCard());
+        assertEquals(card, player.getFirstCard());
 
     }
 
@@ -68,6 +68,13 @@ public class PlayerTest {
         player.addCard(card);
         player.resetHand();
         assertEquals(0, player.getNumberOfCards());
+    }
+
+    @Test
+    public void canGetTotalValueOfHand() {
+        player.addCard(card);
+        player.addCard(card);
+        assertEquals(12,player.getTotalValue());
     }
 
 

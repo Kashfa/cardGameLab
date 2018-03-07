@@ -38,11 +38,19 @@ public class Player {
         return this.name;
     }
 
-    public Card getCard() {
+    public Card getFirstCard() {
         return this.cardhand.get(0);
     }
 
     public void resetHand() {
         this.cardhand = new ArrayList<>();
+    }
+
+    public int getTotalValue() {
+        int totalValue = 0;
+        for (int i=0; i < cardhand.size(); i++) {
+            totalValue += cardhand.get(i).getValue();
+        }
+        return totalValue;
     }
 }
